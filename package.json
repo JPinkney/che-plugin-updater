@@ -1,0 +1,48 @@
+{
+  "name": "che-plugin-updater-action",
+  "version": "0.0.4",
+  "private": true,
+  "description": "Github Action to automatically update and maintain a plugin in the Che Plugin Registry",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "package": "ncc build --source-map --license licenses.txt",
+    "test": "jest",
+    "all": "npm run build && npm run format && npm run lint && npm run package && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JPinkney/che-plugin-updater/"
+  },
+  "keywords": [
+    "actions",
+    "node",
+    "setup",
+    "che"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0",
+    "yaml": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.10",
+    "@types/node": "^14.10.0",
+    "@typescript-eslint/parser": "^3.10.1",
+    "@vercel/ncc": "^0.23.0",
+    "eslint": "^7.8.1",
+    "eslint-plugin-github": "^4.1.1",
+    "eslint-plugin-jest": "^23.20.0",
+    "jest": "^24.9.0",
+    "jest-circus": "^26.4.2",
+    "js-yaml": "^3.14.0",
+    "prettier": "2.1.1",
+    "ts-jest": "^24.3.0",
+    "typescript": "^4.0.2"
+  }
+}
