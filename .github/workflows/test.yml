@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          repository: eclipse/che-plugin-registry
       - uses: ./
         with:
-          milliseconds: 1000
+          pluginPath: redhat/vscode-yaml

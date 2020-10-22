@@ -5,7 +5,6 @@ inputs:
   pluginPath:
     required: true
     description: 'The name of the organization and the plugin in the Che Plugin Registry. E.g. redhat-developer/vscode-yaml'
-    default: ''
 runs:
   using: 'node12'
   main: 'dist/index.js'
